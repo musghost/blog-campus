@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -34,6 +35,10 @@ angular
       .when('/new', {
         templateUrl: 'views/new.html',
         controller: 'NewCtrl'
+      })
+      .when('/edit/:id', {
+        templateUrl: 'views/new.html',
+        controller: 'EditCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -10,7 +10,7 @@
 angular.module('blogApp')
   .controller('NewCtrl', function ($scope, post) {
     $scope.save = function(){
-    	var newPost = new post($scope.post);
+    	var newPost = new post.newPosts($scope.post);
     	newPost.$save();
     }
   });

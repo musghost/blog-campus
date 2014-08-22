@@ -9,5 +9,7 @@
  */
 angular.module('blogApp')
   .factory('post', function ($resource) {
-    return $resource('http://localhost:1337/posts');
+  	return $resource('http://localhost:1337/posts/:id', null, {
+  			'update': { method: 'PUT' }
+  		});
   });
